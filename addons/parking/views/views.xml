@@ -1,0 +1,34 @@
+<odoo>
+  <data>
+	<record id="parking.user_action" model="ir.actions.act_window">
+	    <field name="name">parking_user action</field>
+	    <field name="res_model">parking.user</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+	
+	<record id="parking.rfid_action" model="ir.actions.act_window">
+	    <field name="name">RFID action</field>
+	    <field name="res_model">parking.rfid</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+	
+	<record id="parking.vehicle_action" model="ir.actions.act_window">
+	    <field name="name">vehicle action</field>
+	    <field name="res_model">parking.vehicle</field>
+	    <field name="view_mode">tree</field>
+	</record>
+	
+	<record id="parking.checktagid_action" model="ir.actions.act_window">
+	    <field name="name">check_tag_id action</field>
+	    <field name="res_model">parking.checktagid</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+	
+	<menuitem name="Parking Management" id="parking.menu_root"/>
+	<menuitem id="parking.user_menu" action="parking.user_action" parent="parking.menu_root" sequence="2" name="User Info"/>1
+	<menuitem id="parking.rfid_menu" action="parking.rfid_action" parent="parking.menu_root" sequence="1" name="RFID"/>
+	<menuitem id="parking.vehicle_menu" action="parking.vehicle_action" parent="parking.menu_root" sequence="3" name="Vehicle"/>
+	<menuitem id="parking.checktagid_menu" action="parking.checktagid_action" parent="parking.menu_root" sequence="4" name="Check"/>	
+	
+  </data>
+</odoo>

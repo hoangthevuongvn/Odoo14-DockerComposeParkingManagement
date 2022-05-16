@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+ 
+    <record model="ir.ui.view" id="parking.vehicle_tree">
+      <field name="name">parking vehicle tree</field>
+      <field name="model">parking.vehicle</field>
+      <field name="arch" type="xml">
+        <tree>
+        	<field name="vehicle_owner"/>
+          	<field name="license_plate"/>
+          	<field name="type"/>
+          	<field name="color"/>
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>

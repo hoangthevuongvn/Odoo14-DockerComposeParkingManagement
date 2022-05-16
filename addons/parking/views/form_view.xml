@@ -1,0 +1,69 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="parking.rfid_form">
+      <field name="name">parking rfid form</field>
+      <field name="model">parking.rfid</field>
+      <field name="arch" type="xml">
+        <form>
+        <sheet>
+        <group>
+        	<field name="id_number"/>
+        	<field name="monthly"/>
+        	<field name="rfid_check_rel"/>
+        	<field name="status"/>
+        	<field name="count"/>
+			<field name="rfid_rel" domain="[('user_rel', '=',False )]"/> 
+      	</group>
+         </sheet>
+        </form>
+      </field>
+    </record>
+  
+    <record model="ir.ui.view" id="parking.vehicle_form">
+      <field name="name">parking vehicle form</field>
+      <field name="model">parking.vehicle</field>
+      <field name="arch" type="xml">
+        <form>
+        <sheet>
+        <group>
+        	<field name="license_plate"/>
+        	<field name="type"/>
+        </group>
+        <group>
+        	<field name="color"/>
+        </group>
+         </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="parking.user_form">
+      <field name="name">parking user form</field>
+      <field name="model">parking.user</field>
+      <field name="arch" type="xml">
+        <form>
+        <sheet>
+	        <group>
+	        	<field name="name"/>
+	         	<field name="gender"/>
+	        </group>
+	        <group>
+	        	<field name="dob"/>
+	        	<field name="address"/>
+	        </group>
+	        <group>
+	        	<field name="company"/>
+	        	<field name="membership"/>
+	        	<field name="vehicle"/>
+	        	<!-- <field name="rfid_number" force_save="1"/> -->		
+	        </group>
+	       	<group>
+	        	<field name="user_rel"/>
+	        </group> 
+         </sheet>
+        </form>
+      </field>
+    </record>
+
+  </data>
+</odoo>
