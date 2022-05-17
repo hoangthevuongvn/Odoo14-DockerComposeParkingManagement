@@ -88,7 +88,8 @@ Tính năng chính
         'views/parking_user.xml',
         'views/views.xml',
         'views/templates.xml',
-         'views/parking_check_tag.xml',
+        'views/parking_check_tag.xml',
+        #'wizards/'
         
     ],
     # only loaded in demonstration mode
@@ -104,4 +105,5 @@ Tính năng chính
     'price': 99.9,
     'currency': 'EUR',
     'license': 'OPL-1',
+    
 }
