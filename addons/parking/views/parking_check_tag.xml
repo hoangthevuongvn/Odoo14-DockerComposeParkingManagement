@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+ 
+    <record model="ir.ui.view" id="parking.checktag_tree">
+      <field name="name">parking checktagid tree</field>
+      <field name="model">parking.checktagid</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="check_tag_rel"/>
+          <field name="time_in"/>
+          <field name="time_out"/>
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>

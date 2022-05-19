@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+ 
+    <record model="ir.ui.view" id="parking.user_tree">
+      <field name="name">parking user tree</field>
+      <field name="model">parking.user</field>
+      <field name="arch" type="xml">
+        <tree>
+        <!-- 		<header> -->
+        	 	<button name="get_all_rfid" type="object" string="Log All RFID" />
+        		<!-- </header> -->
+	        	<field name="name"/>
+	         	<field name="gender"/>
+	        	<field name="dob"/>
+	        	<field name="address"/>
+	        	<field name="company"/>
+	        	<field name="rfid_number"/>
+	        	<field name="license_plate"/>
+	        	<field name="brand"/>
+	        	<field name="user_vehicle_type"/>
+	        	<field name="color"/>
+	        	<field name="user_rel"/>
+        </tree>
+      </field>
+    </record>
+
+  </data>
+</odoo>
