@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_parking_user,Access parking user,model_parking_user,base.group_user,1,1,1,1
-access_parking_vehicle,Access parking vehicle,model_parking_vehicle,base.group_user,1,1,1,1
-access_parking_rfid,Access parking rfid,model_parking_rfid,base.group_user,1,1,1,1
-access_parking_checktagid,Access parking checktagid,model_parking_checktagid,base.group_user,1,1,1,1
