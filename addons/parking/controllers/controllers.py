@@ -111,7 +111,13 @@ class LoginAPI(http.Controller):
         return json.dumps(response)
     
 class Infor(http.Controller):
-    @http.route(['/user/infor/<id>'], type='http', auth="none", sitemap=False, cors='*', csrf=False)
+    
+    @http.route(['/test'], type='json', auth="none", methods=['POST'], csrf=False)
+    def test(self):
+        return json.dumps({'test':'ok1'})
+        
+    
+    @http.route(['/user/infor/<id>'], type='json', auth="public", methods=['POST'])
     def infor_handler(self, id, **kw):
         model_name = "user.test"
         dbname = 'OdooDB19'
@@ -163,30 +169,18 @@ class Update(http.Controller):
         return json.dumps(response)
 
 class ListUser(http.Controller):
-    @http.route(['/user/getlist'], type='http', auth="none", sitemap=False, cors='*', csrf=False)
+    @http.route(['/user/getlist'], type='http',csrf=False, method=['GET'], auth='none' )
     def List_handler(self, **kw):
         model_name = "user.test"
         dbname = 'OdooDB19'
         listuser = [] 
-        try:
-            registry = odoo.modules.registry.Registry(dbname)
-            with api.Environment.manage(), registry.cursor() as cr:
-                env = api.Environment(cr, odoo.SUPERUSER_ID, {})
-                rec = env[model_name].search([])
-                for r in rec:
-                    listuser.append(r.username) 
-                print(listuser)
-                response = {
-                        "status": "ok",
-                        "content": {
-                            "name": listuser,
-                            
-                        }
-                    }    
-        except Exception:
-            response = {
-              "status": "error",
-              "content": "not found"
-            }
-        return json.dumps(response)
+        record = request.env[model_name].sudo().search([])
+        print(record[0].username)
+        html_result = '<html><body>'
+        for r in record:
+            html_result += f'<h1>{r.username}</h1>'   
+        html_result += '</body></html>'
+    
+        return html_result
+
                 

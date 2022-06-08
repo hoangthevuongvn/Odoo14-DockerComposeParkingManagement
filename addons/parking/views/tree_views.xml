@@ -1,0 +1,92 @@
+<odoo>
+  <data>
+ 	<record model="ir.ui.view" id="parking.user_tree">
+      <field name="name">parking user tree</field>
+      <field name="model">parking.user</field>
+      <field name="arch" type="xml">
+        <tree>
+        <!-- 		<header> -->
+        	 	<button name="compute_rfid_number" type="object" string="Show ID" />
+        	 	<button name="get_all_rfid" type="object" string="Log All RFID" />
+        		<!-- </header> -->
+	        	<field name="name"/>
+	         	<field name="gender"/>
+	        	<field name="dob"/>
+	        	<field name="address"/>
+	        	<field name="company"/>
+	        	<field name="rfid_number"/>
+	        	<field name="license_plate"/>
+	        	<field name="brand"/>
+	        	<field name="user_vehicle_type"/>
+	        	<field name="color"/>
+	        	<field name="user_rel"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="parking.rfid_tree">
+      <field name="name">parking rfid tree</field>
+      <field name="model">parking.rfid</field>
+      <field name="arch" type="xml">
+        <tree>
+         	<field name="id_number"/>
+        	<field name="rfid_check_rel"/>
+        	<field name="rfid_rel"/>
+        	<field name="status"/>
+        	<field name="count"/>
+        	<field name="ticket_type"/>
+        	<field name="rf_vehicle_type"/>
+        	<field name="price"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="parking.rfid_tree">
+      <field name="name">parking rfid tree</field>
+      <field name="model">parking.rfid</field>
+      <field name="arch" type="xml">
+        <tree>
+         	<field name="id_number"/>
+        	<field name="rfid_check_rel"/>
+        	<field name="rfid_rel"/>
+        	<field name="status"/>
+        	<field name="count"/>
+        	<field name="ticket_type"/>
+        	<field name="rf_vehicle_type"/>
+        	<field name="price"/>
+        </tree>
+      </field>
+    </record>
+ 
+    <record model="ir.ui.view" id="parking.user_test_tree">
+      <field name="name">parking user_test tree</field>
+      <field name="model">parking.ticket_management</field>
+      <field name="arch" type="xml">
+        <tree>
+        <!--   <field name="name"/> -->
+          <field name="ticket_rf_rel"/>
+          <field name="user"/>
+          <!-- <field name="status"/> -->
+          <field name="from_date"/>
+          <field name="due_date"/>
+          <field name="month_number"/>
+          <field name="payment"/>
+        </tree>
+      </field>
+    </record>
+
+	  <record model="ir.ui.view" id="parking.checktag_tree">
+      <field name="name">Test button tree</field>
+      <field name="model">test.button</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="test1"/>
+          <field name="test2"/>
+          <button name="func1" type="object" string="Delete record"/>
+<!--           <button name="func2" type="object" string="Update record"/> -->
+          <button name="func3" type="object" string="Create record1"/>
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

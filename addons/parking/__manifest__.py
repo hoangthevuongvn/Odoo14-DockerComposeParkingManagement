@@ -81,15 +81,12 @@ Tính năng chính
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/parking_rfid.xml',
         'views/form_view.xml',
+        'views/tree_views.xml',
         'views/search_view.xml',
-        'views/parking_user.xml',
         'views/actions.xml',
         'views/templates.xml',
-        'views/parking_check_tag.xml',
-        #'wizards/'
-        
+        'wizards/actions_wizard.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -102,7 +99,7 @@ Tính năng chính
     'application': False,
     'auto_install': False,
     'price': 99.9,
-    'currency': 'EUR',
+    'currency': 'VND',
     'license': 'OPL-1',
     
 }

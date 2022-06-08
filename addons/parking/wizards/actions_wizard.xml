@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+   <record model="ir.ui.view" id="parking_user_form_wizard">
+      <field name="name">parking user form wizard</field>
+      <field name="model">parking.user.wizard</field>
+      <field name="arch" type="xml">
+        <form>
+        <sheet>
+	        <group>
+	        	<field name="name"/>
+	         	<field name="gender"/>
+	        </group>
+	        <group>
+	        	<field name="dob"/>
+	        	<field name="address"/>
+	        </group>
+	        <group>
+	        	<field name="company"/>
+	        	<field name="rfid_number"/>
+	        </group>
+	        <group>
+	        	<field name="license_plate"/>
+	        	<field name="brand"/>
+	        	<field name="user_vehicle_type"/>
+	        	<field name="color"/>
+	        </group> 
+
+         </sheet>
+        </form>
+      </field>
+    </record>
+	<record id="parking.user_action_wizards" model="ir.actions.act_window">
+	    <field name="name">parking_user action wizards</field>
+	    <field name="res_model">parking.user.wizard</field>
+	    <field name="view_mode">form</field>	    
+	</record>
+	
+	<record id="parking.rfid_action_wizards" model="ir.actions.act_window">
+	    <field name="name">RFID action wizards</field>
+	    <field name="res_model">parking.rfid.wizard</field>
+	    <field name="view_mode">form</field>
+	    <field name='view_id' ref='parking_user_form_wizard'></field>
+	    <field name='target'>new</field>
+	</record>
+	
+	<menuitem id="parking.user_menu_wizards" action="parking.user_action_wizards"  parent="parking.menu_root" sequence="9" name="User Wizards"/>
+	<menuitem id="parking.rfid_menu_wizards" action="parking.rfid_action_wizards"  parent="parking.menu_root" sequence="8" name="RFID wizards"/>
+
+	
+	
+  </data>
+</odoo>

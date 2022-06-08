@@ -2,4 +2,11 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_parking_user,Access parking user,model_parking_user,base.group_user,1,1,1,1
 access_parking_rfid,Access parking rfid,model_parking_rfid,base.group_user,1,1,1,1
 access_parking_checktagid,Access parking checktagid,model_parking_checktagid,base.group_user,1,1,1,1
+access_parking_user_wizard,Access parking user wizard,model_parking_user_wizard,base.group_user,1,1,1,1
+access_parking_rfid_wizard,Access parking rfid wizard,model_parking_rfid_wizard,base.group_user,1,1,1,1
 access_parking_user_test,Access parking user test,model_user_test,base.group_user,1,1,1,1
+access_parking_student_test,Access parking student test,model_student_test,base.group_user,1,1,1,1
+access_parking_ticket_mana,Access parking ticket mana,model_parking_ticket_management,base.group_user,1,1,1,1
+access_test_button,Access test button,model_test_button,base.group_user,1,1,1,1
+
+

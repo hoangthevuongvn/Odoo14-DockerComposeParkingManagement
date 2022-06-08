@@ -11,7 +11,7 @@
         	<field name="rfid_check_rel"/>
         	<field name="status"/>
         	<field name="count"/>
-			<field name="rfid_rel" domain="[('user_rel', '=',False )]"/> 
+			<field name="rfid_rel" domain="[('user_rel', '=', False)]"/> 
       	</group>
       	 <group>
         	<field name="ticket_type"/>
@@ -59,6 +59,42 @@
         </form>
       </field>
     </record>
-
+    
+       <record model="ir.ui.view" id="parking.checktag_tree">
+      <field name="name">parking checktagid form</field>
+      <field name="model">parking.checktagid</field>
+      <field name="arch" type="xml">
+        <form>
+          <field name="check_tag_rel"/>
+          <field name="time_in"/>
+          <field name="time_out"/>
+          <field name="total_time"/>
+          <field name="currency_id"/>
+          <field name="cash"/>
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="parking.mana_ticket_form">
+      <field name="name">parking user form</field>
+      <field name="model">parking.ticket_management</field>
+      <field name="arch" type="xml">
+        <form>
+          	<header>
+        	 	<!-- <field name='ticket_rf_rel'/> -->
+        	</header>
+        <sheet>
+	        <group>
+	        	<field name='ticket_rf_rel' domain="[('ticket_type', '=', 'monthly'), ('rfid_ticket_rel', '=', False)]"/>
+	        	<field name="user"/>
+	        	<field name="from_date"/>
+	         	<field name="month_number"/>
+	         	<field name="due_date"/>
+	         	<field name="payment"/>
+	        </group>
+         </sheet>
+        </form>
+      </field>
+    </record>
   </data>
 </odoo>

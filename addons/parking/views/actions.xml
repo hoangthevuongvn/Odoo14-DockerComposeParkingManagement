@@ -24,12 +24,36 @@
 	    <field name="view_mode">tree,form</field>
 	</record>
 	
+	<record id="parking.student_test_action" model="ir.actions.act_window">
+	    <field name="name">student_test action</field>
+	    <field name="res_model">student.test</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+	
+	<record id="parking.ticket_management" model="ir.actions.act_window">
+	    <field name="name">Management Action</field>
+	    <field name="res_model">parking.ticket_management</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+	
+	<record id="test_button_action" model="ir.actions.act_window">
+	    <field name="name">Test Button</field>
+	    <field name="res_model">test.button</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+	
+	
 	<menuitem name="Parking Management" id="parking.menu_root"/>
 	
-	<menuitem id="parking.user_menu" action="parking.user_action" parent="parking.menu_root" sequence="2" name="User Info"/>1
-	<menuitem id="parking.rfid_menu" action="parking.rfid_action" parent="parking.menu_root" sequence="1" name="RFID"/>
-	<menuitem id="parking.checktagid_menu" action="parking.checktagid_action" parent="parking.menu_root" sequence="4" name="Check"/>
-	<menuitem id="parking.user_test_menu" action="parking.user_test_action" parent="parking.menu_root" sequence="5" name="Create User"/>	
+	<menuitem id="parking.user_menu" action="parking.user_action" parent="parking.menu_root" sequence="1" name="Create User"/>
+	<menuitem id="parking.rfid_menu" action="parking.rfid_action" parent="parking.menu_root" sequence="2" name="RFID"/>
+	<menuitem id="parking.checktagid_menu" action="parking.checktagid_action" parent="parking.menu_root" sequence="3" name="Check"/>
+	<menuitem id="parking.user_test_menu" action="parking.user_test_action" parent="parking.menu_root" sequence="5" name="Create User Test"/>
+	<menuitem id="parking.student_test_menu" action="parking.student_test_action" parent="parking.menu_root" sequence="6" name="Create Student"/>
+	<menuitem id="parking.mana_ticket" action="parking.ticket_management" parent="parking.menu_root" sequence="4" name="Mana Ticket"/>
+	<menuitem id="test_button" action="test_button_action" parent="parking.menu_root" sequence="10" name="Test Button"/>				
+	
+	
 	
   </data>
 </odoo>
