@@ -2,7 +2,9 @@
 
 How to install:
 ------
-
+```
+https://github.com/hoangthevuongvn/Odoo14-DockerComposeParkingManagement.git
+```
 ```
 cd Odoo14-DockerComposeParkingManagement
 ```
